@@ -8,7 +8,7 @@ const { createApi } = require('./src/api')
 const { debug } = require('./src/config/debug');
 const fs = require('fs');
 const https = require('https');
-const { FibonacciSequence, ArrayShift } = require('./src/functions/quest-2020')
+const { FibonacciSequence, SecondMax } = require('./src/functions/quest-2020')
 
 require('dayjs/locale/th');
 require('dotenv').config();
@@ -58,8 +58,9 @@ app.use((req, res, next) => {
 createApi(app);
 
 /*###################### Call-Quest-2020 ######################*/
-console.log(FibonacciSequence(12))
-console.log(ArrayShift([1, 2, 3, 4, 5], 'right', 3))
+// console.log(FibonacciSequence(12))
+// console.log(ArrayShift([1, 2, 3, 4, 5], 'right', 3))
+console.log(SecondMax([9, 2, 21, 21]))
 let key, cert, server;
 let httpsOption = {}
 switch (process.env.NODE_ENV) {

@@ -11,6 +11,7 @@ exports.FibonacciSequence = (n) => {
 
 }
 exports.ArrayShift = (arr, direction, n) => {
+    if (arr.length === 0) return []
     if (direction !== 'right' && direction !== 'left') return 'condition of direction is incorrect !!'
     let position = n > arr.length ? n % arr.length : n
     let a1 = [...arr]
@@ -18,4 +19,11 @@ exports.ArrayShift = (arr, direction, n) => {
     direction === 'right' ? a1.splice(0, position - 1) : a1.splice(position, arr.length)
     direction === 'right' ? a2.splice(position - 1, arr.length) : a2.splice(0, position)
     return direction === 'right' ? [...a1, ...a2] : [...a2, ...a1]
+}
+exports.SecondMax = (arr) => {
+    if (arr.length === 0) return 'Error!'
+    let arr_unique = [...new Set(arr)]
+    const max = Math.max.apply(null, arr_unique)
+    arr_unique.length > 1 && arr_unique.splice(arr_unique.indexOf(max), 1)
+    return Math.max.apply(null, arr_unique)
 }

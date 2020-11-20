@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1604918756818" clover="3.2.0">
-  <project timestamp="1604918756819" name="All files">
-    <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1" elements="8" coveredelements="8" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
-    <file name="index.js" path="/Users/dplus/Desktop/NodeUnit+integration/backend-nodejs/src/api/product/index.js">
-      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="5" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="6" count="3" type="stmt"/>
-      <line num="7" count="2" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
+<coverage generated="1605892191549" clover="3.2.0">
+  <project timestamp="1605892191549" name="All files">
+    <metrics statements="23" coveredstatements="23" conditionals="18" coveredconditionals="16" methods="3" coveredmethods="3" elements="44" coveredelements="42" complexity="0" loc="23" ncloc="23" packages="1" files="1" classes="1"/>
+    <file name="quest-2020.js" path="/Users/dplus/Desktop/job-quest-2020/src/functions/quest-2020.js">
+      <metrics statements="23" coveredstatements="23" conditionals="18" coveredconditionals="16" methods="3" coveredmethods="3"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="16" type="stmt"/>
+      <line num="6" count="16" type="stmt"/>
+      <line num="7" count="16" type="stmt"/>
+      <line num="8" count="16" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="2" type="cond" truecount="3" falsecount="1"/>
+      <line num="16" count="2" type="cond" truecount="1" falsecount="1"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="19" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="24" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="25" count="4" type="stmt"/>
+      <line num="26" count="4" type="stmt"/>
+      <line num="27" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="28" count="4" type="stmt"/>
     </file>
   </project>
 </coverage>
