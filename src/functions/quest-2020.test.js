@@ -24,3 +24,11 @@ describe('SecondMax function', () => {
         expect(Test.SecondMax([])).toEqual('Error!');
     });
 });
+describe('FizzBuzz...Bu function', () => {
+    test('> fizzBuzz(21)>>Fizz', () => {
+        expect(Test.FizzBuzz(21)).toEqual('Fizz');
+        expect(Test.FizzBuzz(25)).toEqual('Buzz');
+        expect(Test.FizzBuzz(45)).toEqual('FizzBuzz');
+
+    });
+});

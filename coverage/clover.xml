@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1605892191549" clover="3.2.0">
-  <project timestamp="1605892191549" name="All files">
-    <metrics statements="23" coveredstatements="23" conditionals="18" coveredconditionals="16" methods="3" coveredmethods="3" elements="44" coveredelements="42" complexity="0" loc="23" ncloc="23" packages="1" files="1" classes="1"/>
+<coverage generated="1605894454265" clover="3.2.0">
+  <project timestamp="1605894454265" name="All files">
+    <metrics statements="33" coveredstatements="33" conditionals="22" coveredconditionals="20" methods="4" coveredmethods="4" elements="59" coveredelements="57" complexity="0" loc="33" ncloc="33" packages="1" files="1" classes="1"/>
     <file name="quest-2020.js" path="/Users/dplus/Desktop/job-quest-2020/src/functions/quest-2020.js">
-      <metrics statements="23" coveredstatements="23" conditionals="18" coveredconditionals="16" methods="3" coveredmethods="3"/>
+      <metrics statements="33" coveredstatements="33" conditionals="22" coveredconditionals="20" methods="4" coveredmethods="4"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="3" type="stmt"/>
       <line num="4" count="3" type="stmt"/>
@@ -27,6 +27,16 @@
       <line num="26" count="4" type="stmt"/>
       <line num="27" count="4" type="cond" truecount="2" falsecount="0"/>
       <line num="28" count="4" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="3" type="stmt"/>
+      <line num="32" count="3" type="stmt"/>
+      <line num="37" count="3" type="stmt"/>
+      <line num="38" count="88" type="stmt"/>
+      <line num="39" count="88" type="stmt"/>
+      <line num="40" count="88" type="stmt"/>
+      <line num="41" count="88" type="cond" truecount="4" falsecount="0"/>
+      <line num="42" count="88" type="stmt"/>
+      <line num="44" count="3" type="stmt"/>
     </file>
   </project>
 </coverage>

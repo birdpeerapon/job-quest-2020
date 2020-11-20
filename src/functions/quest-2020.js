@@ -27,3 +27,20 @@ exports.SecondMax = (arr) => {
     arr_unique.length > 1 && arr_unique.splice(arr_unique.indexOf(max), 1)
     return Math.max.apply(null, arr_unique)
 }
+exports.FizzBuzz = (n) => {
+    let output = [1];
+    const map = {
+        3: 'Fizz',
+        5: 'Buzz',
+        15: 'FizzBuzz'
+    };
+    for (let i = 2; i <= n; i++) {
+        const fizz = i % 3 * -1 + 3;
+        const buzz = i % 5 + 5;
+        const fizzBuzz = fizz * buzz;
+        const value = map[fizzBuzz] || map[fizz] || map[buzz] || i;
+        output.push(value);
+    }
+    return output[n - 1];
+
+}
