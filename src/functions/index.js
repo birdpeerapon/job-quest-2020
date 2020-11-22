@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
 const bcrypt = require('bcryptjs');
+const jsonwebtoken = require('jsonwebtoken');
 require('dotenv').config()
 
 

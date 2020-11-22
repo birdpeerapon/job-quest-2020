@@ -1,3 +1,10 @@
+# วิธี run ในส่วน แรก 
+สร้างไฟล์ .env PORT=5500
+ืnpm install
+npm  test  
+ไฟล์ function อยู่ในส่วน function >> quest-2020.js
+
+
 # TakeMeTour's Job Quest 2020 Edition
 
 Thank you for your interest in working at TakeMeTour. First, we would like to take a simple test on your coding skill.
@@ -336,10 +343,20 @@ Thai's joke API can allow user to explore, add, delete, like or dislike Thai's j
 
 **สิ่งที่ต้องส่งมาเป็นคำตอบ**
 - Database Schema มีหน้าตาอย่างไร
+  สามารถเปิดดูได้ในส่วนของ ไฟล์ er.vuerd.json หรือ สามารถดูได้จากรูป er.image
 - จะใช้วิธีใดในการทำ Authentication
+  ตอบ ในส่วนนี้ทางผมได้ คิดว่าให้ front end เป็นจุดแรก ก่อนการเข้ามาในระบบ สมัครสมาชิก user ควร login ด้วย gmail ก่อนถึงจะสามารถ เข้ามาในส่วน form การสมัครสมาชิกได้เพื่อเป็นการ validate email ผู้สมัครในเบื่องต้นหลังจากเข้ามาได้เรียบร้อย front end จะทำการเรียก api login และส่ง email มาให้ (ตัวอย่าง code api >> src >> authen >> authenRouter) เราจะสร้าง token ด้วย lip jsonwebtoken หลังจากนั้น API ที่จะต้อง ดึงข้อมูลต่างๆในระบบ จะต้องมีการ validate token ก่อนเข้าถึง API เสมอ
 - ต้องมี REST API Endpoint และ Method อะไรบ้าง (ไม่นับส่วนของการ Login / Register) ในกรณีที่ Endpoint ไหนมีการส่ง Body ต้องระบุ Body มาด้วยว่าต้องมีอะไรบ้าง (ไม่จำเป็นต้องละเอียด ในกรณีที่ field เยอะมากๆ)
+ ตอบ api ทั้งหมด อยู่ใน authenRouter 
+ -login,saveDraft,register,profileByEmail
+
 ใน API สำหรับการ Submit ส่งใบสมัคร ควรทำอะไรบ้างในขั้นตอนดังกล่าว สามารถเขียนเป็น Pseudo Code ได้
 - สามารถตอบเป็นภาษาไทยได้
+ตอบ ในขั้นตอนนี้ ทางฝั่ง front end จะต้องส่ง body 
+email และ page เข้ามาให้ ระบบจะเช็ค schema ก่อน ว่าข้อมูลเข้ามาครบทั้งหมดหรือป่าว และ เช็ค validate token ด้วย
+ถ้าทั้งสองอย่างผ่าน ระบบจะเรียก controller regis 
+ระบบ จะเช็คว่า email ดังกล่าวมีอยู่ในระบบหรือยัง ถ้ายังจะเรีกย model insertRegister แต่ ถ้ามีแล้วจะเรียก updateRegister โดยหลังบ้านจะเขียน query ด้วย store procedure เนื่องจากมีการทำงานในหลาย table และง่ายต่อการ roll back กรณี error
+
 
 [English Version]
 We need you to help our CTO of Orange Cap who is super passionate about running and  we are going to organise the event under "Orange Cap Marathon 2021." Of course! If you saw this message, you are chosen! Your mission is to design an architecture for Front-end web apps by React on the registration page for our applicants. 

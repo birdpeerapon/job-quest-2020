@@ -5,26 +5,26 @@ const { validate_schema } = require('../../middleware/validate_schema');
 const { validate_token } = require('../../middleware/validate_token')
 
 
-// route.post('/login',
-//     //validate_schema([schemaLogin]),
-//     authenController.login
-// )
-// route.post('/saveDraft',
-//     validate_token(),
-//     // validate_schema([schemaSaveDraft]),
-//     authenController.saveDraft
+route.post('/login',
+    //validate_schema([schemaLogin]),
+    authenController.login
+)
+route.post('/saveDraft',
+    validate_token(),
+    // validate_schema([schemaSaveDraft]),
+    authenController.saveDraft
 
-// )
-// route.post('/register',
-//     validate_token(),
-//     //validate_schema([schemaRegister]),
-//     authenController.register
-// )
-// route.get('/profileByEmail',
-//     validate_token(),
-//     //validate_schema([schemaLogin]),
-//     authenController.getProfile
-// )
+)
+route.post('/register',
+    validate_token(),
+    //validate_schema([schemaRegister]),
+    authenController.register
+)
+route.get('/profileByEmail',
+    validate_token(),
+    //validate_schema([schemaLogin]),
+    authenController.getProfile
+)
 
 
 module.exports = route;
