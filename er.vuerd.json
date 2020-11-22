@@ -1,0 +1,775 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 44,
+    "scrollLeft": 36,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "CUSTOMER",
+        "comment": "ผู้สมัคร",
+        "columns": [
+          {
+            "name": "identityCard",
+            "comment": "บัตรประชาชน",
+            "dataType": "VARCHAR(13)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71,
+              "widthComment": 75,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "91df41f1-8d95-656c-4d0e-70404374fca3"
+          },
+          {
+            "name": "titleName",
+            "comment": "นำหน้าชื่อ",
+            "dataType": "VARCHAR(5)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 81,
+              "widthDefault": 60
+            },
+            "id": "5a3e7d18-1f6f-b078-61a1-ed8e078c1a82"
+          },
+          {
+            "name": "nameThai",
+            "comment": "ชื่อไทย",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "84089250-f87f-6bea-4e12-3504c9ffd452"
+          },
+          {
+            "name": "nameEng",
+            "comment": "ชื่ออังกฤษ",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "0a6f47dd-d903-682b-7e76-f76ffd70607a"
+          },
+          {
+            "name": "birthDate",
+            "comment": "วันเกิด",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "69924691-4af3-d7e6-ec21-337827d6d7be"
+          },
+          {
+            "name": "email",
+            "comment": "อีเมล",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 95,
+              "widthDefault": 60
+            },
+            "id": "4378e3d1-a8b3-d220-6512-584ec4bbe77a"
+          },
+          {
+            "name": "address",
+            "comment": "ที่อยู่",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b96d7da5-bcd0-2b79-542b-1385e07d77b2"
+          },
+          {
+            "name": "myImage",
+            "comment": " รูปหน้าตรง",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b623c055-bc3e-2946-dba7-2b9b0459e184"
+          },
+          {
+            "name": "alias",
+            "comment": "ชื่อเรียก",
+            "dataType": "VARCHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "6bd1da0d-ba79-2d81-723d-911a5ab07ad7"
+          },
+          {
+            "name": "HaveJoinRunning",
+            "comment": "เคยลงงานแข่งวิ่งหรือไม่",
+            "dataType": "BOOLEAN",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 105,
+              "widthComment": 127,
+              "widthDataType": 65,
+              "widthDefault": 60
+            },
+            "id": "efbe4d08-151e-a239-2b24-546056358902"
+          },
+          {
+            "name": "expectedTime",
+            "comment": "เวลาที่คาดหวัง",
+            "dataType": "TIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 83,
+              "widthComment": 79,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9b265ef0-5ae7-a530-7f56-84ca45c43f2e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 39,
+          "top": 100,
+          "zIndex": 461,
+          "widthName": 76,
+          "widthComment": 60
+        },
+        "id": "a824a7bf-2d35-e15d-8f64-872270450af5"
+      },
+      {
+        "name": "EMERGENCY_CONTACT",
+        "comment": "ติดต่อฉุกเฉย",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "authincrement",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 84,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "73ca8fc6-ac4f-1bee-103b-2e63fe1c0bc8"
+          },
+          {
+            "name": "name",
+            "comment": "ชื่อ",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "03bd5dbc-df81-a996-1145-31270fb47c4b"
+          },
+          {
+            "name": "rerationShip",
+            "comment": "ความสัมพันธ์",
+            "dataType": "VARCHAR(20)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 72,
+              "widthComment": 72,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "46781e86-55b1-5624-1a00-4589bf09df23"
+          },
+          {
+            "name": "phoneNumber",
+            "comment": "เบอร์ติดต่อ",
+            "dataType": "VARCHAR(10)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 84,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "aa94f246-cd9f-6d89-5503-ea41d9d6379f"
+          },
+          {
+            "name": "emailOfApplicants",
+            "comment": "อีเมล",
+            "dataType": "VARCHAR(13)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 107,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "e40f99a9-f8e4-aa1b-5c53-be8a22e3ff41"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 504,
+          "top": 165,
+          "zIndex": 469,
+          "widthName": 155,
+          "widthComment": 70
+        },
+        "id": "9e8d6435-db80-ab7d-c74d-49a7b1ec908b"
+      },
+      {
+        "name": "MEDICAL_INFORMATION",
+        "comment": "",
+        "columns": [
+          {
+            "name": "email",
+            "comment": "อีเมล",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 95,
+              "widthDefault": 60
+            },
+            "id": "8543950a-e3ad-a0de-63ff-263d657c6f0c"
+          },
+          {
+            "name": "bloodType",
+            "comment": "กรุ๊ปเลือด",
+            "dataType": "VARCHAR(5)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62,
+              "widthComment": 60,
+              "widthDataType": 81,
+              "widthDefault": 60
+            },
+            "id": "52731af0-f459-173d-d6bb-218c0f0dbae5"
+          },
+          {
+            "name": "reactionToDrug",
+            "comment": "อาการแพ้ยา",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 90,
+              "widthComment": 68,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0a539495-b1dc-e403-9f38-b7a25ad4f646"
+          },
+          {
+            "name": "congenitalDisease",
+            "comment": "โรคประจำตัว",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 108,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "efb18136-c69f-6375-b316-01d686499b2e"
+          },
+          {
+            "name": "surgeryLocation",
+            "comment": "สถานที่ผ่าตัด",
+            "dataType": "VARCHAR(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 95,
+              "widthComment": 71,
+              "widthDataType": 95,
+              "widthDefault": 60
+            },
+            "id": "754ec5d3-5e3e-afab-1fac-ec9abb6ee0e9"
+          },
+          {
+            "name": "surgenryDate",
+            "comment": "วันที่ผ่าตัด",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 80,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2c849a09-07b9-6e45-da4c-f6211a9a0408"
+          },
+          {
+            "name": "planToHaveChildren",
+            "comment": "แผนมีลูก",
+            "dataType": "BOOLEAN",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 119,
+              "widthComment": 60,
+              "widthDataType": 65,
+              "widthDefault": 60
+            },
+            "id": "d82ed4ec-f492-74ca-de02-89a257e1289c"
+          },
+          {
+            "name": "personalMedicine",
+            "comment": "ยาประจำตัว",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 104,
+              "widthComment": 65,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b96ee8ed-a92d-ad1e-879f-1c81248cf242"
+          },
+          {
+            "name": "sicknessFromRun",
+            "comment": "เคยมีอาการบาดเจ็บจากการวิ่ง",
+            "dataType": "BOOLEAN",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 106,
+              "widthComment": 163,
+              "widthDataType": 65,
+              "widthDefault": 60
+            },
+            "id": "53608cde-ea62-1fa0-f269-539943e1e552"
+          },
+          {
+            "name": "exerciseUsually",
+            "comment": "ออกกำลังกายเป็นประจำ",
+            "dataType": "BOOLEAN",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 93,
+              "widthComment": 130,
+              "widthDataType": 65,
+              "widthDefault": 60
+            },
+            "id": "9adf7965-df2d-8de7-5cf3-10dc29718079"
+          },
+          {
+            "name": "abnormalWhileExercise",
+            "comment": "าการเจ็บแน่นหน้าอกขณะออกกำลังกาย",
+            "dataType": "BOOLEAN",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 139,
+              "widthComment": 208,
+              "widthDataType": 65,
+              "widthDefault": 60
+            },
+            "id": "80e462b4-9fa4-11dd-28db-d95a9fbc1f1c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 106,
+          "top": 372,
+          "zIndex": 474,
+          "widthName": 157,
+          "widthComment": 60
+        },
+        "id": "4f38735e-703c-81e2-20e2-8c214782c6ca"
+      },
+      {
+        "name": "SOUVENIR_SHIRT",
+        "comment": "เสื้อที่ละลึก",
+        "columns": [
+          {
+            "name": "email",
+            "comment": "อีเมล",
+            "dataType": "VARCHAR(13)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 88,
+              "widthDefault": 60
+            },
+            "id": "7570ae51-7165-dd36-8698-4e0961cb9a92"
+          },
+          {
+            "name": "size",
+            "comment": "ไซส์เสื้อ",
+            "dataType": "VARCHAR(5)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 81,
+              "widthDefault": 60
+            },
+            "id": "735870ee-83c6-ab49-8d0e-b61d44864f8c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 617,
+          "top": 376,
+          "zIndex": 472,
+          "widthName": 116,
+          "widthComment": 60
+        },
+        "id": "b3082369-6d7c-cbc7-8c7f-83ee78de91d4"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}

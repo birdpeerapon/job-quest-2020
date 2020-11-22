@@ -2,8 +2,16 @@ const _ = require('lodash')
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment');
+const bcrypt = require('bcryptjs');
 require('dotenv').config()
 
+
+exports.generateToken = (req, email) => {
+    let objToken = { email }
+    req.token = jsonwebtoken.sign(objToken, process.env.SIGN, { expiresIn: '1d' });
+    req.token_login = dayjs().format('YYYY-MM-DD HH:mm:ss');
+
+}
 exports.getOriginPath = (originalUrl) => {
     let replace = originalUrl.replace(`/api/v1/${process.env.PREFIX}`, '');
     if (replace.includes('?')) {

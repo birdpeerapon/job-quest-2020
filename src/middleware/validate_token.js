@@ -27,6 +27,8 @@ exports.validate_token = () => {
                     failed(res, 'token not found')
                 } else {
                     // value = 
+                    req.token = req.headers.authorization,
+                        req.email = decode.email
                     debug('TOKEN IS CALL => ', req.session.token)
                     next();
                 }
