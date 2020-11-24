@@ -60,6 +60,7 @@ createApi(app);
 /*###################### Call-Quest-2020 ######################*/
 // console.log(FibonacciSequence(12))
 // console.log(ArrayShift([1, 2, 3, 4, 5], 'right', 3))
+console.log(new Date())
 console.log(SecondMax([9, 2, 21, 21]))
 let key, cert, server;
 let httpsOption = {}

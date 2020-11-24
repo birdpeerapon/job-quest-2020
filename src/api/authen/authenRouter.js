@@ -6,23 +6,22 @@ const { validate_token } = require('../../middleware/validate_token')
 
 
 route.post('/login',
-    //validate_schema([schemaLogin]),
+    validate_schema([schemaLogin]),
     authenController.login
 )
 route.post('/saveDraft',
     validate_token(),
-    // validate_schema([schemaSaveDraft]),
+    validate_schema([schemaSaveDraft]),
     authenController.saveDraft
 
 )
 route.post('/register',
     validate_token(),
-    //validate_schema([schemaRegister]),
+    validate_schema([schemaRegister]),
     authenController.register
 )
 route.get('/profileByEmail',
     validate_token(),
-    //validate_schema([schemaLogin]),
     authenController.getProfile
 )
 

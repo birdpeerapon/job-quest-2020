@@ -29,7 +29,26 @@ const schemaRegister = Joi.object({
 })
 const schemaSaveDraft = Joi.object({
     email: Joi.string().email(),
-    page: Joi.number()
+    page: Joi.number(),
+    titleName: Joi.string(),
+    identityCard: Joi.string().length(13),
+    nameThai: Joi.string(),
+    nameEng: Joi.string(),
+    birthDate: Joi.date().iso(),
+    address: Joi.string(),
+    alias: Joi.string().length(10),
+    bloodType: Joi.string(),
+    reactionToDrug: Joi.string(),
+    congenitalDisease: Joi.string(),
+    surgeryLocation: Joi.string(),
+    surgenryDate: Joi.date(),
+    planToHaveChildren: Joi.boolean(),
+    personalMedicine: Joi.string(),
+    sicknessFromRun: Joi.boolean(),
+    exerciseUsually: Joi.boolean(),
+    abnormalWhileExercise: Joi.boolean(),
+    name_contact: Joi.array(),
+    sizeOfshirt: Joi.string(),
 
 })
 

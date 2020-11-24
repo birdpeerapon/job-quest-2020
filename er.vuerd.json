@@ -3,7 +3,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": 44,
-    "scrollLeft": 36,
+    "scrollLeft": 545,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -693,7 +693,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 210,
           "top": 442,
           "zIndex": 479,
