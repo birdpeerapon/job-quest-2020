@@ -4,6 +4,121 @@
 npm  test  
 ไฟล์ function อยู่ในส่วน function >> quest-2020.js
 
+# คำตอบ part 2
+สิ่งที่ต้องส่งมาเป็นคำตอบ
+
+Database Schema มีหน้าตาอย่างไร
+- สามารถเปิดดูได้ในส่วนของ ไฟล์ er.vuerd.json(Extension ERD Editor) หรือ สามารถดูได้จากรูป er.image 
+
+จะใช้วิธีใดในการทำ Authentication
+- ในส่วนนี้ทางผมได้ คิดว่าให้ front end เป็นจุดแรก ก่อนการเข้ามาในระบบ สมัครสมาชิก user ควร login ด้วย gmail ก่อนถึงจะสามารถ เข้ามาในส่วน form การสมัครสมาชิกได้เพื่อเป็นการ validate email ผู้สมัครในเบื่องต้นหลังจากเข้ามาได้เรียบร้อย front end จะทำการเรียก api login และส่ง email มาให้ (ตัวอย่าง code api >> src >> authen >> authenRouter) เราจะสร้าง token ด้วย lip jsonwebtoken หลังจากนั้น API ที่จะต้อง ดึงข้อมูลต่างๆในระบบ จะต้องมีการ validate token ก่อนเข้าถึง API เสมอ
+
+ต้องมี REST API Endpoint และ Method อะไรบ้าง (ไม่นับส่วนของการ Login / Register) ในกรณีที่ Endpoint ไหนมีการส่ง Body ต้องระบุ Body มาด้วยว่าต้องมีอะไรบ้าง (ไม่จำเป็นต้องละเอียด ในกรณีที่ field เยอะมากๆ)
+ ตอบ api ทั้งหมด อยู่ใน authenRouter (ถ้าไม่นับ login และ register)
+ จะเหลืออีกเพียงแค่ 2 API คือ saveDraft และ getProfileByEmail
+การทำงานของ saveDraft จะกำหนดกับทางทีม FrontEnd ให้ FrontEnd ทำการส่งเลขหน้าที่ทำการ saveDraft มาโดย 
+1 = หน้าข้อมูลที่ประกอบด้วย ข้อมูลส่วนตัว,ไซต์เสื้อ
+2 = ข้อมูลทางการแพทย์
+3 = ผู้ติดต่อฉุกเฉิน. เพื่อที่ว่าเมื่อหลังบ้านได้รับเลข page แล้วจะสามารถ ไปทำการอัพเดทข้อมูลได้ถูก table 
+## SAVEDRAFT [/saveDraft]
+
+### API [POST]
++ Request (application/json)
+    + Headers
+        Authorization: {token}
+        
+    + Body
+    
+        {
+            "email": "peeraponpothai2536@gmail.com",
+            "page": 1, 
+            "titleName": "Mr.",
+            "identityCard": 1234567890123,
+            "nameThai": "พีรพล โพธิ์ทัย",
+            "nameEng": "Peerapon Pothai",
+            "birthDate": "1993-11-24",
+            "address": "7/93 tiwanon ",
+            "alias": "Bird",
+            "bloodType": "",
+            "reactionToDrug": "",//แพ้ยา
+            "congenitalDisease": "",//โรคประจำตัว
+            "surgeryLocation": "",//สถานที่ผ่าตัด
+            "surgenryDate": "",วันที่ผ่าตัด
+            "planToHaveChildren": "",//แผนมีบุตร
+            "personalMedicine": "",//ยาประจำตัว
+            "sicknessFromRun": 0,//เคยมีอาการบาดเจ็บจากการวิ่ง
+            "exerciseUsually": 0,//ออกกำลังกายเป็นประจำหรือไม่
+            "abnormalWhileExercise": 0,//เคยบาดเจ็บจากการออกกำลังกายหรีอไม่
+            "name_contact": [
+            {
+              "name":"",
+              "rerationShip":"",
+              "phoneNumber":""
+            },{
+              "name":"",
+              "rerationShip":"",
+              "phoneNumber":""
+            }],
+            "sizeOfshirt": "L",
+        }
++ Response 200 (application/json)
+
+        {
+             "success": true,
+             "result": "savedraft success"
+        }
+
+ในข้อมูลส่วนนี้เราไม่จำเป็นต้องแทบ param email ไปเนี่ยจาก เราได้ทำการเก็บ email อยู่ใน headers ที่ส่งมาแล้ว โดยการเก็บนั้นเกิดขึ้นในขั้นตอน loin api 
+## GET PROFILE BY Emil [/getProfileByEmail]
+
+### API [GET]
+
++ Request (application/json)
+    + Headers
+        Authorization: {token}
+
++ Response 200 (application/json)
+
+        {
+           "success":true,
+           "result": {
+              "CustomerProfile":{
+                  "email": "peeraponpothai2536@gmail.com",
+                  "page": 1, 
+                  "titleName": "Mr.",
+                  "identityCard": 1234567890123,
+                  "nameThai": "พีรพล โพธิ์ทัย",
+                  "nameEng": "Peerapon Pothai",
+                  "birthDate": "1993-11-24",
+                  "address": "7/93 tiwanon ",
+                  "alias": "Bird",
+                  "sizeOfshirt": "L"
+              },
+              "MadicalInformation":{
+                  "bloodType": "",
+                  "reactionToDrug": "",//แพ้ยา
+                  "congenitalDisease": "",//โรคประจำตัว
+                  "surgeryLocation": "",//สถานที่ผ่าตัด
+                  "surgenryDate": "",วันที่ผ่าตัด
+                  "planToHaveChildren": "",//แผนมีบุตร
+                  "personalMedicine": "",//ยาประจำตัว
+                  "sicknessFromRun": 0,//เคยมีอาการบาดเจ็บจากการวิ่ง
+                  "exerciseUsually": 0,//ออกกำลังกายเป็นประจำหรือไม่
+                  "abnormalWhileExercise": 0,//เคยบาดเจ็บจากการออกกำลังกายหรีอไม่
+              },
+              "EMERGENCY_CONTACT":[
+                {
+                  "name":"",
+                  "rerationShip":"",
+                  "phoneNumber":""
+              },{
+                  "name":"",
+                  "rerationShip":"",
+                  "phoneNumber":""
+              }]
+           }
+        }
+
 
 # TakeMeTour's Job Quest 2020 Edition
 
