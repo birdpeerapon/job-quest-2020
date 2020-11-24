@@ -28,8 +28,7 @@ Database Schema มีหน้าตาอย่างไร
         Authorization: {token}
         
     + Body
-    
-        {
+       ``` {
             "email": "peeraponpothai2536@gmail.com",
             "page": 1, 
             "titleName": "Mr.",
@@ -60,7 +59,7 @@ Database Schema มีหน้าตาอย่างไร
               "phoneNumber":""
             }],
             "sizeOfshirt": "L",
-        }
+        }```
 + Response 200 (application/json)
 
         {
